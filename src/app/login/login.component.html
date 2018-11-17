@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row">
+  <div class="col-lg-8 offset-lg-2 mt-4" *ngIf="Error">
+    <div class="alert alert-danger" role="alert">
+      <strong>Impossible de se connecter</strong>
+      Veuillez vérifier votre nom d'utilisateur et votre mot de passe !
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+  <div class="offset-lg-4 col-lg-4 pb-4 mt-4">
+    <h2>S'authentifier</h2>
+    <div>
+      <div class="form-group">
+        <label>Nom d'utilisateur:</label>
+        <input type="text" [(ngModel)]="UserData.username" placeholder="Votre nom d'utilisateur" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label>Mot de passe:</label>
+        <input type="password" [(ngModel)]="UserData.password" placeholder="Mot de passe" class="form-control"/>
+      </div>
+    </div>
+    <div class="float-right">
+      <button (click)="login()" class="btn btn-lg btn-success">Se connecter</button>
+    </div>
+  </div>
+  </div>
+  </div>
